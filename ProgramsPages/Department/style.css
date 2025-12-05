@@ -1,0 +1,237 @@
+/* --- CSS Reset and Variables --- */
+:root {
+    --primary-color: #003366;   /* Deep University Blue */
+    --secondary-color: #005b96; /* Lighter blue for accents */
+    --accent-gold: #FFD700;     /* Gold for highlights */
+    --text-dark: #333333;       /* Standard dark text */
+    --text-light: #f4f4f9;      /* Off-white text */
+    --bg-light: #f0f2f5;        /* Light gray background */
+    --font-stack: 'Poppins', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+/* --- Utility Classes --- */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-container {
+    padding: 4rem 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-gold);
+}
+
+/* --- HERO SECTION (With Image & Parallax) --- */
+.hero-section {
+    height: 85vh; /* Tall hero section */
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    
+    /* This loads a professional university building image from the internet.
+       If you have a local image, replace the URL with 'your-image-name.jpg'
+    */
+    background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.5)), 
+                url('https://scontent.fixj2-1.fna.fbcdn.net/v/t39.30808-6/481456500_1603771900280147_7256512136599774745_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hd-hw6NYen4Q7kNvwGJmvB4&_nc_oc=AdmhCi0OPBpuGXOgqJIvLLIPZKpo1NkabeMjNVgTa6uKvoyheeDbj8wDJaOz8kwmxrw&_nc_zt=23&_nc_ht=scontent.fixj2-1.fna&_nc_gid=oO6_dE_HFNS-7G3VLAUGGA&oh=00_AfhNATDBoXye9H3W0J5PDg8eEO8ncNo8oqDiSLo86cuyMg&oe=693078DC');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* The Parallax Effect */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Hero Text Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Button Styling */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--accent-gold);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+    transform: scale(1.05);
+}
+
+/* --- Features Section (Grid) --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* --- Programs Section --- */
+.programs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.program-box {
+    border-left: 5px solid var(--secondary-color);
+    background-color: white;
+    padding: 25px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: margin-left 0.3s ease;
+}
+
+.program-box:hover {
+    margin-left: 10px; /* Slight shift to right on hover */
+    border-left-color: var(--accent-gold);
+}
+
+.program-box h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content h2 { font-size: 1.4rem; }
+    .section-title { font-size: 1.7rem; }
+}

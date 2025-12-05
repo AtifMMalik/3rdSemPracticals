@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text analysis</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome!</h1>
+        <h3>Its a text analyser tool.</h3>
+    </header>
+
+    <div id="paragraphContainer">
+        <p id="paragraph">
+        </p>
+
+        <div id="find_replace_container">
+            <div>
+                <div class="inputSet">
+                    <input type="text" id="findField">
+                    <button id="findBtn">Find</button>
+                </div>
+                <span id="frequencyCount"></span>
+            </div>
+
+            <div id="replaceFieldset_container">
+                <div class="inputSet">
+                    <input type="text" id="replaceField">
+                    <button id="replaceBtn">Replace All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="form">
+        <textarea name="" id="textarea_para" placeholder="Enter paragraph text."></textarea>
+
+        <button type="submit" id="addParagraph">Add paragraph</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

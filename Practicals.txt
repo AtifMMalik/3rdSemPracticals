@@ -1,0 +1,11 @@
+
+1. Create a static page for Department of Computer Science.
+2. Create a form
+3. WAP to find greatest of 3 numbers using ternary operator
+4. Style paragraph using external sheet and id
+5. WAP to implement methods of math class
+6. WAP to implement Find and Replace operation
+7. Email Validation form
+8. WAP to analyze paragraph
+    WAP to analyze paragraph to perform replace and frequency operation
+9. Calculate age with the help of DOB

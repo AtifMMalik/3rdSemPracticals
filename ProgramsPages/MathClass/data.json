@@ -1,0 +1,56 @@
+{
+  "NumberCrunching": [
+    { "name": "abs", "method": "Math.abs(x)", "inputsRequired": 1 },
+    { "name": "sign", "method": "Math.sign(x)", "inputsRequired": 1 },
+    { "name": "trunc", "method": "Math.trunc(x)", "inputsRequired": 1 },
+    { "name": "round", "method": "Math.round(x)", "inputsRequired": 1 },
+    { "name": "floor", "method": "Math.floor(x)", "inputsRequired": 1 },
+    { "name": "ceil", "method": "Math.ceil(x)", "inputsRequired": 1 },
+    { "name": "fround", "method": "Math.fround(x)", "inputsRequired": 1 },
+    { "name": "clz32", "method": "Math.clz32(x)", "inputsRequired": 1 },
+    { "name": "imul", "method": "Math.imul(a, b)", "inputsRequired": 2 },
+    { "name": "hypot", "method": "Math.hypot(...values)", "inputsRequired": "n" },
+    { "name": "cbrt", "method": "Math.cbrt(x)", "inputsRequired": 1 },
+    { "name": "expm1", "method": "Math.expm1(x)", "inputsRequired": 1 },
+    { "name": "log1p", "method": "Math.log1p(x)", "inputsRequired": 1 },
+    { "name": "log10", "method": "Math.log10(x)", "inputsRequired": 1 },
+    { "name": "log2", "method": "Math.log2(x)", "inputsRequired": 1 },
+    { "name": "max", "method": "Math.max(...values)", "inputsRequired": "n" },
+    { "name": "min", "method": "Math.min(...values)", "inputsRequired": "n" },
+    { "name": "pow", "method": "Math.pow(base, exponent)", "inputsRequired": 2 },
+    { "name": "sqrt", "method": "Math.sqrt(x)", "inputsRequired": 1 },
+    { "name": "random", "method": "Math.random()", "inputsRequired": 0 }
+  ],
+
+  "Trigonometry": [
+    { "name": "sin", "method": "Math.sin(x)", "inputsRequired": 1 },
+    { "name": "cos", "method": "Math.cos(x)", "inputsRequired": 1 },
+    { "name": "tan", "method": "Math.tan(x)", "inputsRequired": 1 },
+    { "name": "asin", "method": "Math.asin(x)", "inputsRequired": 1 },
+    { "name": "acos", "method": "Math.acos(x)", "inputsRequired": 1 },
+    { "name": "atan", "method": "Math.atan(x)", "inputsRequired": 1 },
+    { "name": "atan2", "method": "Math.atan2(y, x)", "inputsRequired": 2 },
+    { "name": "sinh", "method": "Math.sinh(x)", "inputsRequired": 1 },
+    { "name": "cosh", "method": "Math.cosh(x)", "inputsRequired": 1 },
+    { "name": "tanh", "method": "Math.tanh(x)", "inputsRequired": 1 },
+    { "name": "asinh", "method": "Math.asinh(x)", "inputsRequired": 1 },
+    { "name": "acosh", "method": "Math.acosh(x)", "inputsRequired": 1 },
+    { "name": "atanh", "method": "Math.atanh(x)", "inputsRequired": 1 }
+  ],
+
+  "Exponential_N_Logarithmic": [
+    { "name": "exp", "method": "Math.exp(x)", "inputsRequired": 1 },
+    { "name": "log", "method": "Math.log(x)", "inputsRequired": 1 },
+    { "name": "expm1", "method": "Math.expm1(x)", "inputsRequired": 1 },
+    { "name": "log1p", "method": "Math.log1p(x)", "inputsRequired": 1 },
+    { "name": "log10", "method": "Math.log10(x)", "inputsRequired": 1 },
+    { "name": "log2", "method": "Math.log2(x)", "inputsRequired": 1 }
+  ],
+
+  "MiscUtilities": [
+    { "name": "random", "method": "Math.random()", "inputsRequired": 0 },
+    { "name": "hypot", "method": "Math.hypot(...values)", "inputsRequired": "n" },
+    { "name": "imul", "method": "Math.imul(a, b)", "inputsRequired": 2 },
+    { "name": "clz32", "method": "Math.clz32(x)", "inputsRequired": 1 }
+  ]
+}

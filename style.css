@@ -1,0 +1,101 @@
+/* 1. Base Setup & Variables */
+:root {
+    --bg-color: #0f172a;       /* Dark Navy Background */
+    --card-bg: #1e293b;        /* Lighter Navy for Cards */
+    --text-primary: #f8fafc;   /* White-ish text */
+    --text-secondary: #94a3b8; /* Muted grey text */
+    --accent-color: #6366f1;   /* Indigo Accent */
+    --accent-glow: #818cf8;    /* Lighter accent for hover */
+    --card-border: #334155;    /* Subtle border */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 50px; /* Space at bottom */
+}
+
+/* 2. Main Heading Styling */
+h1 {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* Create a text gradient */
+    background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+/* 3. Grid Container Styling */
+.linksContainer {
+    display: grid;
+    /* Responsive columns: creates as many columns as will fit, min width 320px */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* 4. Card (Anchor) Styling */
+.linksContainer a {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Heading (h2) */
+.linksContainer a h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--card-border);
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Card Text (p) */
+.linksContainer a p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Last paragraph shouldn't have margin bottom */
+.linksContainer a p:last-child {
+    margin-bottom: 0;
+}
+
+/* 5. Hover Effects (The "Amazing" Part) */
+
+/* Lift the card up */
+.linksContainer a:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 1px 25px -10px rgba(99, 102, 241, 0.3); 
+}
+
+/* Change heading color on hover */
+.linksContainer a:hover h2 {
+    color: var(--accent-glow);
+    border-color: var(--accent-color);
+}

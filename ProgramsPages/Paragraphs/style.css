@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    & header{
+        text-align: center;
+
+        & h3{
+            color: gray;
+        }
+    }
+
+    & #paragraphContainer{
+        display: none;
+
+        & .highlight{
+            background-color: rgb(255, 225, 0);
+        }
+
+        & #find_replace_container{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & div{
+                display: flex;
+                align-items: flex-end;
+
+                & .inputSet{
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-right: 10px;
+                }
+            }
+
+            & #replaceFieldset_container{
+                display: none;
+            }
+
+            & button, input{
+                padding: 10px 16px;
+                margin: 0;
+                width: 200px;
+                border: none;
+                outline: none;
+            }
+
+            & button{
+                width: 100px;
+                background-color: #ff7979;
+                color: white;
+            }
+        }
+    }
+
+    & #form{
+        display: flex;
+        flex-direction: column;
+
+        & textarea{
+            resize: vertical;
+            padding: 10px;
+            border-radius: 5px;
+            min-height: 3rem;
+        }
+
+        & #addParagraph{
+            padding: 10px 16px;
+            margin-top: 10px;
+            background-color: tomato;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
